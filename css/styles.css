@@ -62,12 +62,31 @@ input:checked + .slider:before {
 }
 
 /* catalog */
+.element-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 1px #cdcdcd solid;
+  border-radius: 3px;
+}
 .element-wrap .element-img {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+@media (max-width: 468px) {
+  .element-wrap .element-img img {
+    width: 100%;
+  }
+}
+.element-wrap .element-name {
+  min-height: 60px;
+  margin-bottom: 8px;
+}
+.element-wrap .element-price {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */

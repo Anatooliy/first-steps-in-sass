@@ -70,11 +70,28 @@ input{
 
 /* catalog */
 .element-wrap{
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 1px #cdcdcd solid;
+  border-radius: 3px;
   .element-img{   
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;  
+    img{
+      @media (max-width: 468px) {
+        width: 100%;
+      }
+    }  
+  }
+  .element-name{
+    min-height: 60px;
+    margin-bottom: 8px;
+  }
+  .element-price{
+    font-weight: 600;
   }
 }
