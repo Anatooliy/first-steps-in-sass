@@ -89,6 +89,18 @@
   font-size: 16px;
   margin-bottom: 15px;
 }
+.main-wrap footer .copyright {
+  padding: 15px;
+  padding-top: 20px;
+  background-color: #caffca;
+  color: #ffbd42;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.main-wrap {
+  margin-bottom: 0;
+}
 
 .color-changer {
   display: none;
@@ -119,6 +131,10 @@
 }
 .color-changer:checked + .main-wrap .element-wrap:hover {
   box-shadow: 0 0px 10px #ffbd42;
+}
+.color-changer:checked + .main-wrap footer .copyright {
+  background-color: #ffbd42;
+  color: #caffca;
 }
 .color-changer:focus + .main-wrap .slider {
   box-shadow: 0 0 1px #caffca;
