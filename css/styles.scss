@@ -1,97 +1,150 @@
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  input {
+$checkedColor: rgb(202, 255, 202);
+$uncheckedColor: rgb(255, 189, 66);
+
+.main-wrap{
+  //navigation
+  .navbar-default{
+    background-color: $checkedColor;
+    border-color: $checkedColor;
+  }
+  //switcher
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $uncheckedColor;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    &.round {
+      border-radius: 34px;
+      &:before {
+        border-radius: 50%;
+      }
+    }    
+  }
+  // The switch - the box around the slider 
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 22px;  
+    margin-top: 13px;
+    margin-bottom: 10px;   
+  }
+  .color-changer {
     opacity: 0;
     width: 0;
     height: 0;
   }
-}
-
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  &:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  &.round {
-    border-radius: 34px;
-    &:before {
-      border-radius: 50%;
-    }
-  }
-}
-
-input{
-   &:checked + .slider {
-    background-color: #2196F3;    
-  }
-  &:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  &:checked + .slider{
-    &:before{
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-  }
-}
-
-/* big slider */
-.carousel-inner{
-  margin-top: 50px;
-  img{
-    width: 100%;
-
-  }
-}
-
-/* catalog */
-.element-wrap{
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 5px;
-  border: 1px #cdcdcd solid;
-  border-radius: 3px;
-  .element-img{   
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;  
+  //main slider
+  .carousel-inner{
+    margin-top: 50px;
     img{
-      @media (max-width: 468px) {
-        width: 100%;
+      width: 100%;  
+    }
+  }
+  .carousel-control{
+    color: $checkedColor;
+  }
+
+  .carousel-indicators{
+    .active{
+      background-color: $checkedColor;
+    }
+    li{
+        border-color: $checkedColor;
+    } 
+  }
+  //catalog
+  .element-wrap{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 1px $checkedColor solid;
+    border-radius: 3px;
+    &:hover{
+      box-shadow: 0 0px 10px $checkedColor;
+    }
+    .element-img{   
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;  
+      img{
+        @media (max-width: 468px) {
+          width: 100%;
+        }
+      }  
+    }
+    .element-name{
+      min-height: 60px;
+      margin-bottom: 8px;
+    }
+    .element-price{
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//change color
+.color-changer{    
+  display: none;  
+  &:checked + .main-wrap{
+    //navigation
+    .navbar-default{
+      background-color: $uncheckedColor;
+      border-color: $uncheckedColor;
+    }
+    //switcher
+    .slider {
+      background-color: $checkedColor; 
+      &:before{
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }   
+    } 
+    //main slider
+    .carousel-control{
+      color: $uncheckedColor;
+    }
+    .carousel-indicators{
+      .active{
+        background-color: $uncheckedColor;
+      }
+      li{
+          border-color: $uncheckedColor;
+      } 
+    } 
+    //caralog
+    .element-wrap{
+      border-color: $uncheckedColor;
+      &:hover{
+        box-shadow: 0 0px 10px $uncheckedColor;
       }
     }  
   }
-  .element-name{
-    min-height: 60px;
-    margin-bottom: 8px;
-  }
-  .element-price{
-    font-weight: 600;
+  &:focus + .main-wrap{
+    //switcher
+    .slider {
+      box-shadow: 0 0 1px $checkedColor;
+    }
   }
 }

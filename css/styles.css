@@ -1,75 +1,74 @@
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.main-wrap .navbar-default {
+  background-color: #caffca;
+  border-color: #caffca;
 }
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
+.main-wrap .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ffbd42;
   -webkit-transition: .4s;
   transition: .4s;
 }
-.slider:before {
+.main-wrap .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 14px;
+  width: 14px;
   left: 4px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
-.slider.round {
+.main-wrap .slider.round {
   border-radius: 34px;
 }
-.slider.round:before {
+.main-wrap .slider.round:before {
   border-radius: 50%;
 }
-
-input:checked + .slider {
-  background-color: #2196F3;
+.main-wrap .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 22px;
+  margin-top: 13px;
+  margin-bottom: 10px;
 }
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+.main-wrap .color-changer {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* big slider */
-.carousel-inner {
+.main-wrap .carousel-inner {
   margin-top: 50px;
 }
-.carousel-inner img {
+.main-wrap .carousel-inner img {
   width: 100%;
 }
-
-/* catalog */
-.element-wrap {
+.main-wrap .carousel-control {
+  color: #caffca;
+}
+.main-wrap .carousel-indicators .active {
+  background-color: #caffca;
+}
+.main-wrap .carousel-indicators li {
+  border-color: #caffca;
+}
+.main-wrap .element-wrap {
   text-align: center;
   margin-bottom: 30px;
   padding: 5px;
-  border: 1px #cdcdcd solid;
+  border: 1px #caffca solid;
   border-radius: 3px;
 }
-.element-wrap .element-img {
+.main-wrap .element-wrap:hover {
+  box-shadow: 0 0px 10px #caffca;
+}
+.main-wrap .element-wrap .element-img {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -77,16 +76,52 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 @media (max-width: 468px) {
-  .element-wrap .element-img img {
+  .main-wrap .element-wrap .element-img img {
     width: 100%;
   }
 }
-.element-wrap .element-name {
+.main-wrap .element-wrap .element-name {
   min-height: 60px;
   margin-bottom: 8px;
 }
-.element-wrap .element-price {
+.main-wrap .element-wrap .element-price {
   font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.color-changer {
+  display: none;
+}
+.color-changer:checked + .main-wrap .navbar-default {
+  background-color: #ffbd42;
+  border-color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .slider {
+  background-color: #caffca;
+}
+.color-changer:checked + .main-wrap .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.color-changer:checked + .main-wrap .carousel-control {
+  color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .carousel-indicators .active {
+  background-color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .carousel-indicators li {
+  border-color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .element-wrap {
+  border-color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .element-wrap:hover {
+  box-shadow: 0 0px 10px #ffbd42;
+}
+.color-changer:focus + .main-wrap .slider {
+  box-shadow: 0 0 1px #caffca;
 }
 
 /*# sourceMappingURL=styles.css.map */
