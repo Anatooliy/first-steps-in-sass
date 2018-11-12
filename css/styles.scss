@@ -102,6 +102,14 @@ $uncheckedColor: rgb(255, 189, 66);
       margin-bottom: 15px;
     }
   }
+  //contact us
+  .btn{
+    color: $uncheckedColor;
+    background-color: $checkedColor;
+  }
+  .form-control{
+    border-color: $checkedColor;
+  }  
   //footer
   footer{
     .copyright{
@@ -114,8 +122,17 @@ $uncheckedColor: rgb(255, 189, 66);
       margin-bottom: 0;
     }
   }
-  &{
-    margin-bottom: 0;
+  //modal
+  .modal-header{ 
+    border-bottom: 1px solid $checkedColor;
+  }
+  .modal-body{
+    p{
+      margin-top: 10px;
+    }
+  }
+  .modal-footer{
+    border-top: 1px solid $checkedColor;
   }
 }
 
@@ -156,12 +173,27 @@ $uncheckedColor: rgb(255, 189, 66);
         box-shadow: 0 0px 10px $uncheckedColor;
       }
     }  
+    //contact us
+    .btn{
+      color: $checkedColor;
+      background-color: $uncheckedColor;
+    }
+    .form-control{
+      border-color: $uncheckedColor;
+    }  
     //footer
     footer{
       .copyright{
         background-color: $uncheckedColor;
         color: $checkedColor;
       }
+    }
+    //modal
+    .modal-header{ 
+      border-bottom: 1px solid $uncheckedColor;
+    }
+    .modal-footer{
+      border-top: 1px solid $uncheckedColor;
     }
   }
   //switcher

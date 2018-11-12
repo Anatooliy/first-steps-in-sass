@@ -90,6 +90,13 @@
   font-size: 16px;
   margin-bottom: 15px;
 }
+.main-wrap .btn {
+  color: #ffbd42;
+  background-color: #caffca;
+}
+.main-wrap .form-control {
+  border-color: #caffca;
+}
 .main-wrap footer .copyright {
   padding: 15px;
   padding-top: 20px;
@@ -99,8 +106,14 @@
   font-size: 16px;
   margin-bottom: 0;
 }
-.main-wrap {
-  margin-bottom: 0;
+.main-wrap .modal-header {
+  border-bottom: 1px solid #caffca;
+}
+.main-wrap .modal-body p {
+  margin-top: 10px;
+}
+.main-wrap .modal-footer {
+  border-top: 1px solid #caffca;
 }
 
 .color-changer {
@@ -133,9 +146,22 @@
 .color-changer:checked + .main-wrap .element-wrap:hover {
   box-shadow: 0 0px 10px #ffbd42;
 }
+.color-changer:checked + .main-wrap .btn {
+  color: #caffca;
+  background-color: #ffbd42;
+}
+.color-changer:checked + .main-wrap .form-control {
+  border-color: #ffbd42;
+}
 .color-changer:checked + .main-wrap footer .copyright {
   background-color: #ffbd42;
   color: #caffca;
+}
+.color-changer:checked + .main-wrap .modal-header {
+  border-bottom: 1px solid #ffbd42;
+}
+.color-changer:checked + .main-wrap .modal-footer {
+  border-top: 1px solid #ffbd42;
 }
 .color-changer:focus + .main-wrap .slider {
   box-shadow: 0 0 1px #caffca;
